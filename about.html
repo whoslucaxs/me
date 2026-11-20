@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script src="age.js" defer></script>
+    <script src="contacts.js" defer></script>
   </head>
   <body>
     <pre id="waves" aria-hidden="true"></pre>
@@ -16,9 +17,17 @@
       <a href="index.html">back home</a>
     </nav>
     <main class="about-layout">
-      <div class="portrait">
-        <img src="assets/portrait.png" width="1254" height="1254" alt="Pixel art portrait of Lucas by the sea at sunset." />
-        <img class="portrait-ascii" src="assets/portrait-ascii.svg" width="600" height="600" alt="" aria-hidden="true" />
+      <div class="profile">
+        <div class="portrait">
+          <img src="assets/portrait.png" width="1254" height="1254" alt="Pixel art portrait of Lucas by the sea at sunset." />
+          <img class="portrait-ascii" src="assets/portrait-ascii.svg" width="600" height="600" alt="" aria-hidden="true" />
+        </div>
+        <nav class="social-links" aria-label="Find me online">
+          <a href="https://github.com/whoslucaxs" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <button id="discord-copy" type="button" aria-label="Copy Discord username: nygotte">Discord · nygotte</button>
+        </nav>
+        <p id="contact-status" role="status"></p>
       </div>
       <article class="about-copy" aria-labelledby="about-title">
         <h1 id="about-title">About Me</h1>

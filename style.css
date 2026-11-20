@@ -78,7 +78,7 @@ h1 {
   color: #ededed;
 }
 
-a:focus-visible {
+a:focus-visible, button:focus-visible {
   outline: 2px solid #ededed;
   outline-offset: 4px;
 }
@@ -100,6 +100,42 @@ a:focus-visible {
 }
 
 .about-nav a:hover { color: #ededed; }
+
+.profile { width: 100%; }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  color: #737373;
+  font-size: 0.875rem;
+}
+
+.social-links a, .social-links button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #aaa;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-links a:hover, .social-links button:hover { color: #ededed; }
+
+#contact-status {
+  min-height: 1.5em;
+  margin: 0.25rem 0 0;
+  color: #aaa;
+  font-size: 0.75rem;
+  text-align: center;
+}
 
 .about-layout {
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.6fr);
@@ -240,7 +276,7 @@ a:focus-visible {
     padding-top: 1rem;
   }
 
-  .portrait { max-width: 220px; }
+  .profile { max-width: 220px; }
 }
 
 #name::after {
