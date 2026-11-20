@@ -30,11 +30,11 @@ runInNewContext(readFileSync(`${__dirname}/script.js`, "utf8"), {
   clearTimeout: () => { pendingTyping = undefined; },
 });
 
-for (const expected of ["ny", "n", "", "w", "wh", "who", "whos", "whosl", "whoslu", "whosluc", "whosluca", "whoslucax"]) {
+for (const expected of ["ny", "n", "", "w", "wh", "who", "whos", "whosl", "whoslu", "whosluc", "whosluca", "whoslucax", "whoslucaxs"]) {
   pendingTyping();
   assert.equal(nameElement.textContent, expected);
 }
-for (let letter = 0; letter < 9; letter++) pendingTyping();
+for (let letter = 0; letter < 10; letter++) pendingTyping();
 assert.equal(nameElement.textContent, "");
 for (let letter = 0; letter < 3; letter++) pendingTyping();
 assert.equal(nameElement.textContent, "nyx");

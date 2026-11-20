@@ -2,7 +2,7 @@ const waves = document.querySelector("#waves");
 const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const shades = " .,:;+=xX$&#";
 const nameElement = document.querySelector("#name");
-const names = ["nyx", "whoslucax"];
+const names = ["nyx", "whoslucaxs"];
 let nameIndex = 0;
 let deleting = true;
 let typingTimer;
