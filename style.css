@@ -108,10 +108,11 @@ a:focus-visible, button:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 1.25rem;
   color: #737373;
   font-size: 0.875rem;
+  text-shadow: 0 1px 3px #050505, 0 0 8px #050505;
 }
 
 .social-links a, .social-links button {
@@ -121,8 +122,9 @@ a:focus-visible, button:focus-visible {
   padding: 0;
   border: 0;
   background: none;
-  color: #aaa;
+  color: #bcbcbc;
   font: inherit;
+  letter-spacing: 0.04em;
   text-decoration: none;
   cursor: pointer;
 }
