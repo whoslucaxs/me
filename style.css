@@ -110,7 +110,24 @@ a:focus-visible, button:focus-visible {
 
 .about-nav a:hover { color: #ededed; }
 
-.profile { width: 100%; }
+.profile { grid-area: profile; width: 100%; }
+
+.esp32 {
+  grid-area: board;
+  width: 100%;
+  margin: 2rem 0 0;
+  color: #aaa;
+  text-align: center;
+}
+
+.esp32 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  mix-blend-mode: lighten;
+  user-select: none;
+}
 
 .social-links {
   display: flex;
@@ -150,9 +167,12 @@ a:focus-visible, button:focus-visible {
 
 .about-layout {
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.6fr);
+  grid-template-areas: "profile copy" "board copy";
+  grid-template-rows: auto 1fr;
+  row-gap: 0;
   align-items: start;
   align-content: start;
-  gap: clamp(2.5rem, 6vw, 5rem);
+  column-gap: clamp(2.5rem, 6vw, 5rem);
   max-width: 1140px;
   min-height: auto;
   margin: 0 auto;
@@ -218,6 +238,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .about-copy {
+  grid-area: copy;
   min-width: 0;
   color: #aaa;
   font-size: 1rem;
@@ -421,10 +442,14 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 760px) {
   .about-layout {
     grid-template-columns: 1fr;
+    grid-template-areas: "profile" "copy" "board";
+    grid-template-rows: auto;
+    row-gap: 2.5rem;
     padding-top: 1rem;
   }
 
   .profile { max-width: 220px; }
+  .esp32 { max-width: 320px; margin-top: 0; }
   .projects-layout { padding-top: 1rem; }
   .project { grid-template-columns: 1fr; gap: 1rem; }
 }
